@@ -196,3 +196,21 @@ export const uploadAvatar = async (req, res) => {
     res.status(500).json({ message: "Server error", error: error.message });
   }
 };
+
+// @desc    Get user by username (public profile)
+// @route   GET /api/auth/user/:username
+export const getUserByUsername = async (req, res) => {
+  try {
+    const user = await User.findOne({ username: req.params.username })
+      .select('username email bio profilePic createdAt role');
+    
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    res.json(user);
+  } catch (error) {
+    console.error('Error fetching user:', error);
+    res.status(500).json({ message: error.message });
+  }
+};

@@ -58,7 +58,7 @@ const Home = () => {
       {/* Header with Logo/Title & Search */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-10 gap-6">
         <div className="flex items-center gap-3">
-          <img src="../../public/ipaskil_logo.png" alt="Logo" className="w-10 h-10 md:w-12 md:h-12 object-contain" />
+          <img src="/ipaskil_logo.png" alt="Logo" className="w-10 h-10 md:w-12 md:h-12 object-contain" />
           <h1 className="text-3xl md:text-4xl font-black text-base-content italic tracking-tighter uppercase">
             RAW • REAL • RELEASES
           </h1>

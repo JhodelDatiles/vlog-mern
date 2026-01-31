@@ -32,7 +32,7 @@ const Login = () => {
         {/* --- LOGO SECTION --- */}
         <div className="flex flex-col items-center text-center md:text-left md:items-start animate-in fade-in slide-in-from-left duration-700">
           <img 
-            src="../../public/ipaskil_logo.png" 
+            src="/ipaskil_logo.png" 
             alt="iPaskil Logo" 
             className="w-100  object-contain mb-4 drop-shadow-2xl" 
           />

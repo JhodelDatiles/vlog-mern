@@ -20,10 +20,8 @@ const UserSchema = new mongoose.Schema({
     required: true,
     minlength: 6
   },
-  bio: {
-    type: String,
-    default: ''
-  },
+  bio: { type: String, default: '', maxlength: 160 }, // 🚀 Make sure this exists
+
   profilePic: { type: String, default: '' },
   // ADD THIS FIELD TO TRACK CLOUDINARY ASSETS
   profilePicPublicId: { type: String, default: '' }, 

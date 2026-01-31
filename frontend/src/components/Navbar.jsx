@@ -70,7 +70,7 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/" className="btn btn-ghost normal-case text-2xl font-black text-primary tracking-tighter">
-            <img src="../../public/ipaskil_logo.png" alt="iPaskil Logo" className="w-20" />
+            <img src="/ipaskil_logo.png" alt="iPaskil Logo" className="w-20" />
           </Link>
         </div>
 

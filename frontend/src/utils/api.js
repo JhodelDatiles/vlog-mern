@@ -1,9 +1,12 @@
-import axios from 'axios';
+import axios from "axios";
 
-const API_URL = 'http://localhost:5001/api';
+// 🚀 Dynamic BASE_URL: localhost in dev, /api in production
+const BASE_URL = import.meta.env.MODE === "development" 
+  ? "http://localhost:5001/api" 
+  : "/api";
 
 const api = axios.create({
-  baseURL: API_URL,
+  baseURL: BASE_URL,
   withCredentials: true 
 });
 
@@ -24,12 +27,11 @@ export const authAPI = {
   logout: () => api.post('/auth/logout'),
 };
 
-// User APIs (New)
+// User APIs
 export const userAPI = {
-  // This matches the call in EditUser.js
   updateProfile: (data) => api.put('/auth/profile', data), 
-  getProfile: (username) => api.get(`/auth/profile/${username}`),
-uploadProfilePic: (data) => api.post('/auth/upload-avatar', data), // Must match the mount path
+  getUserByUsername: (username) => api.get(`/auth/user/${username}`),
+  uploadProfilePic: (data) => api.post('/auth/upload-avatar', data),
 };
 
 // Post APIs

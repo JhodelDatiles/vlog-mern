@@ -27,7 +27,7 @@ const UserProfile = () => {
         // 2. Fetch the ACTUAL user profile to get the bio
         // This hits the backend route we just updated to include the bio
         try {
-          const userResponse = await userAPI.getProfile(username); 
+const userResponse = await userAPI.getUserByUsername(username);
           if (userResponse.data) {
             setAuthorInfo(userResponse.data);
           }
