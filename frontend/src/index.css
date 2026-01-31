@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light, dark, forest, coffee;
+}
+
+/* Custom Red Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #ef4444; 
+  border-radius: 10px;
+}
+
+/* Masonry Logic */
+.masonry-grid {
+  column-count: 1;
+  column-gap: 1.5rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+
+.masonry-item {
+  display: block;
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+/* Image behavior for Masonry */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
